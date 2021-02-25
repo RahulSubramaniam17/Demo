@@ -1,0 +1,4 @@
+bosun-simple-app:
+  bosun:
+    region: eu-west-1
+    vpc: qa
