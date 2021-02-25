@@ -28,6 +28,12 @@ bosun-simple-app:
       mountPath: /tmp
     - name: config-volume
       mountPath: /etc/config
+    volumes:
+      - name: tmp
+        emptyDir: {}
+      - name: config-volume
+        configMap:
+          name: example
     livenessDelay: 10
     livenessProbe:
       httpGet:
@@ -41,16 +47,6 @@ bosun-simple-app:
     healthCheck: /index.html
     healthCheckPort: 8080
 
-  volumes:
-    - name: tmp
-      emptyDir: {}
-    - name: config-volume
-      configMap:
-        name: example
-        items: 
-          - key: example-config
-            path: example.conf
-  
   serviceAccount:
     create: true
     privileged: false
