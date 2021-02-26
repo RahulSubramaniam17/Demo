@@ -10,9 +10,9 @@ bosun-simple-app:
 
   container:
     repository: "549050352176.dkr.ecr.us-east-1.amazonaws.com/demo-springboot-agrippa"
-    tag: "latest"
+    tag: "1.0.0"
     replicaCount: 1
-    port: 8080
+    port: 8090
     # env:
       # - name:
       #   value:
@@ -37,15 +37,15 @@ bosun-simple-app:
     livenessDelay: 10
     livenessProbe:
       httpGet:
-        port: 8080
-        path: /index.html
+        port: 8090
+        path: /actuator/health
       initialDelaySeconds: 10
     readinessProbe:
       httpGet:
-        port: 8080
-        path: /index.html
-    healthCheck: /index.html
-    healthCheckPort: 8080
+        port: 8090
+        path: /actuator/health
+    healthCheck: /actuator/health
+    healthCheckPort: 8090
 
   serviceAccount:
     create: true
@@ -67,11 +67,11 @@ bosun-simple-app:
 
   resources:
     limits:
-      cpu: 200m
-      memory: 128Mi
+      cpu: 600m
+      memory: 256Mi
     requests:
-      cpu: 100m
-      memory: 64Mi
+      cpu: 300m
+      memory: 128Mi
 
   podSecurityContext: {}
     # runAsUser: 1001
