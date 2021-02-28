@@ -48,7 +48,7 @@ The Init of the folder of your project creates a deploy folder which contains 3 
 The Settings for deployment of an image to your cluster can be changed using these files. 
 The values.yaml file contains an URI for the image to be deployed. The necessary ECR  image should be passed here.
 
-![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon.png)
+![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon5.png)
 
 After Making the necessary changes in the yaml files. We can deploy using 
 
