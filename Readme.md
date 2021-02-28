@@ -3,6 +3,7 @@
 ## Installing Bosun on local machine 
 
 ```brew tap bazaarvoice/bazaarvoice git@github.com:bazaarvoice/homebrew-bazaarvoice.git```
+
 ```brew install bosuncfg```
 
 Once the installatio is complete. Execute this command to set up the Kubernetes Cluster Configuration 
@@ -23,7 +24,7 @@ Follow the View Push commands as shown in this image
 
 To push an image to the registry manually follow the following steps 
 
-1. $ aws ecr get-login-password --region us-east-1 --profile qa| docker login --username AWS --password-stdin 549050352176.dkr.ecr.us-east-1.amazonaws.com
+1. ``` aws ecr get-login-password --region us-east-1 --profile qa| docker login --username AWS --password-stdin 549050352176.dkr.ecr.us-east-1.amazonaws.com ```
 
 2. Do a Docker build on your image and tag it as necessary. \                   
  ``` $ docker build -t <image_tag> ```
