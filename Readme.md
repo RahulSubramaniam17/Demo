@@ -47,7 +47,7 @@ The Init of the folder of your project creates a deploy folder which contains 3 
 The Settings for deployment of an image to your cluster can be changed using these files. 
 The values.yaml file contains an URI for the image to be deployed. The necessary ECR  image should be passed here.
 
-![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon(5).png)
+![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon.png)
 
 After Making the necessary changes in the yaml files. We can deploy using 
 
@@ -70,11 +70,11 @@ The endpoint for the deployed pod can be accessed by using
 
 The deployment can fail due to many reasons. The main few are due to the container failing the health and readiness checks. This can be changed by updating the health checks in the values.yaml file 
 
-![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon(6).png)
+![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon6.png)
 
 The deployment can also fail due to the lack of resources, the necessary resources can be updated in the values.yaml file 
 
-![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon(7).png)
+![alt text](https://github.com/rrsrahul/Demo/blob/master/images/carbon7.png)
 
 
 
