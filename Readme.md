@@ -14,6 +14,7 @@ To push an image to the registry manually follow the following steps
 4.  docker push 549050352176.dkr.ecr.us-east-1.amazonaws.com/agrippa-staleness-check-scheduler:1.0.0
 
 ![Alt text](images\2021-03-01 00_05_56-Window.png "Title")
+![plot](./images/2021-03-01 00_05_56-Window.png)
 
 
 
