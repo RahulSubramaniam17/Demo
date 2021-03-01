@@ -67,7 +67,7 @@ To check the health, status of a deployment we can use
 
 The endpoint for the deployed pod can be accessed by using 
 
-``` ```
+``` kubectl -n hackathon get ing ```
 
 The deployment can fail due to many reasons. The main few are due to the container failing the health and readiness checks. This can be changed by updating the health checks in the values.yaml file 
 
