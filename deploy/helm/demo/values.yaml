@@ -10,9 +10,16 @@ bosun-simple-app:
 
   container:
     repository: "549050352176.dkr.ecr.us-east-1.amazonaws.com/demo-springboot-agrippa"
-    tag: "1.0.0"
+    tag: "latest"
     replicaCount: 1
     port: 8090
+    env:
+      - name: SPECIAL_KEY
+        valueFrom:
+          configMapKeyRef:
+            name: special-config
+            key: special.how
+
     # env:
       # - name:
       #   value:
@@ -28,12 +35,17 @@ bosun-simple-app:
       mountPath: /tmp
     - name: config-volume
       mountPath: /etc/config
+    - name: config-secret 
+      mountPath: /etc/secret
     volumes:
       - name: tmp
         emptyDir: {}
       - name: config-volume
         configMap:
           name: example
+      - name: config-secret
+        secret:
+          secretName: db-user-pass
     livenessDelay: 10
     livenessProbe:
       httpGet:
